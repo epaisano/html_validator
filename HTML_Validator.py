@@ -24,7 +24,7 @@ def validate_html(html):
         else:
             if len(stack) == 0:
                 return False
-            tmp=(-len(stack[-1])) + 1
+            tmp = (-len(stack[-1])) + 1
             if thtml[tag][:tmp:-1] == stack[-1][:tmp:-1]:
                 stack.pop()
             else:
